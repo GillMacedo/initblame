@@ -1,0 +1,13 @@
+{
+  "name": "initblame",
+  "version": "0.1.0",
+  "description": "Find which packages and modules make a Go program slow to start, from GODEBUG=inittrace=1 output, with the import chain that brings each one in and a before/after comparison.",
+  "author": {
+    "name": "Giulliano Macedo",
+    "url": "https://github.com/GillMacedo"
+  },
+  "homepage": "https://github.com/GillMacedo/initblame",
+  "repository": "https://github.com/GillMacedo/initblame",
+  "license": "MIT",
+  "keywords": ["go", "golang", "startup-time", "cold-start", "inittrace", "godebug", "performance", "init"]
+}

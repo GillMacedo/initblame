@@ -1,0 +1,14 @@
+{
+  "name": "initblame-marketplace",
+  "description": "Marketplace for initblame, which finds the packages and modules that make a Go program slow to start.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "initblame",
+      "source": "./plugin",
+      "description": "Find which packages and modules make a Go program slow to start, from GODEBUG=inittrace=1 output, and the import chain that brings each one in."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "skills": ["finding-slow-go-startup"],
+    "query": "Our Go CLI takes a noticeable moment even for --version. Why is it slow to start?",
+    "expected_behavior": [
+      "Builds the CLI and, after the user agrees, runs initblame.go in run mode with --version and --dir",
+      "Opens the init code of each listed package and names what it does at init",
+      "Says which import from the user's module brings each slow package in, and suggests sync.OnceValue or moving the import"
+    ]
+  },
+  {
+    "skills": ["finding-slow-go-startup"],
+    "query": "Cold starts of our Lambda got slower after we upgraded dependencies. Here are inittrace logs from before and after.",
+    "expected_behavior": [
+      "Runs initblame.go with --base on the before trace and the after trace",
+      "Reports the new or slower packages and their modules",
+      "Says that init clock is only part of a cold start"
+    ]
+  },
+  {
+    "skills": ["finding-slow-go-startup"],
+    "query": "initblame shows a package went from 1.2 ms to 1.5 ms. Is that a regression?",
+    "expected_behavior": [
+      "Explains that changes this small are within run-to-run noise",
+      "Doesn't claim a regression"
+    ]
+  }
+]
